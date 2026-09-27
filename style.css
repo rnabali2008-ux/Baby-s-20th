@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #eee5d6;
+  color: #29231f;
+  font-family: Georgia, "Times New Roman", serif;
+  overflow-x: hidden;
+}
+
+/* OPENING */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.5), transparent 25%),
+    #eee5d6;
+}
+
+.small-text,
+.section-label,
+.track-number {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 12vw, 100px);
+  line-height: .95;
+  font-weight: normal;
+  margin: 25px 0;
+}
+
+.intro {
+  font-size: 17px;
+  font-style: italic;
+  max-width: 350px;
+}
+
+.scroll {
+  margin-top: 80px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+
+/* LETTER */
+
+.letter-section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.letter {
+  display: block;
+  width: min(90%, 650px);
+  height: auto;
+  margin: 40px auto 0;
+  box-shadow: 0 15px 40px rgba(0,0,0,.18);
+}
+
+
+/* TRACKS */
+
+.tracks {
+  padding: 110px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.tracks > h2 {
+  font-size: clamp(35px, 8vw, 65px);
+  font-weight: normal;
+  line-height: 1;
+  margin: 25px 0 80px;
+}
+
+.track {
+  padding: 70px 0;
+  border-top: 1px solid rgba(41,35,31,.25);
+  text-align: center;
+}
+
+.track-number {
+  margin-bottom: 12px;
+}
+
+.track h3 {
+  font-size: clamp(32px, 7vw, 55px);
+  font-weight: normal;
+  font-style: italic;
+}
+
+.artist {
+  margin: 12px 0 30px;
+  font-size: 14px;
+}
+
+.track-image {
+  display: block;
+  width: min(90%, 600px);
+  height: auto;
+  margin: 0 auto 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,.16);
+}
+
+.listen {
+  display: inline-block;
+  color: #29231f;
+  border: 1px solid #29231f;
+  border-radius: 30px;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: all .3s ease;
+}
+
+.listen:hover {
+  background: #29231f;
+  color: #eee5d6;
+}
+
+
+/* ENDING */
+
+.ending {
+  min-height: 100vh;
+  padding: 100px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ending h2 {
+  font-size: clamp(45px, 10vw, 90px);
+  line-height: .95;
+  font-weight: normal;
+  margin: 30px 0;
+}
+
+.ending p:not(.section-label):not(.signature) {
+  max-width: 500px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.signature {
+  margin-top: 40px;
+  font-style: italic;
+  font-size: 20px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .hero h1 {
+    font-size: 55px;
+  }
+
+  .letter-section,
+  .tracks {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .track {
+    padding: 55px 0;
+  }
+
+}
